@@ -14,7 +14,7 @@ const Nosotros = () => {
         <div className="nosotros__cards-wrapper">
           <div className="nosotros__director-info">
             <p className="nosotros__director-label">Director</p>
-            <h3 className="nosotros__director-name">Morris Eder Arce Amao</h3>
+            <h3 className="nosotros__director-name">Moris Arce</h3>
             <p className="nosotros__biography">
               Con más de 25 años en el arte musical, Morris Eder Arce Amao ha dedicado su vida a preservar y enaltecer la música tradicional de nuestra región. Su pasión y compromiso han permitido que La Provincial Coracora se consolide como una de las bandas más reconocidas, llevando nuestras raíces musicales a diversos escenarios y eventos especiales.
             </p>
