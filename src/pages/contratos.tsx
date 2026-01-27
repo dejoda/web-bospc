@@ -217,7 +217,7 @@ const Contratos = () => {
               </div>
               <div className="contracts__field-group">
                 <label htmlFor="musicians">Cantidad de músicos</label>
-                <input id="musicians" name="musicians" type="number" min="8" max="30" placeholder="8" required />
+                <input id="musicians" name="musicians" type="number" min="8" max="40" placeholder="8" required />
               </div>
             </div>
             <div className="contracts__field-group">
@@ -226,7 +226,7 @@ const Contratos = () => {
             </div>
             <div className="contracts__field-group">
               <label htmlFor="district">Distrito</label>
-              <input id="district" name="district" type="text" placeholder="San Juan de Lurigancho" required maxLength={80} />
+              <input id="district" name="district" type="text" placeholder="Ingrese Distrito" required maxLength={80} />
             </div>
             <div className="contracts__field-group">
               <label htmlFor="address">Dirección</label>
