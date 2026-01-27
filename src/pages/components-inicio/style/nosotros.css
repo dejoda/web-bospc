@@ -1,0 +1,467 @@
+.nosotros {
+  width: 100%;
+  background: linear-gradient(145deg, var(--bg-secondary), #0b0b0b);
+  color: var(--white);
+  padding: clamp(4.5rem, 6vw, 6rem) clamp(1.25rem, 4vw, 3rem) clamp(3.5rem, 4vw, 5rem);
+  border-top: 1px solid rgba(242, 201, 76, 0.12);
+  border-bottom: 1px solid rgba(242, 201, 76, 0.08);
+}
+
+.nosotros__header {
+  max-width: 900px;
+  margin: 0 auto clamp(4.2rem, 5vw, 5.2rem);
+  text-align: center;
+}
+
+.nosotros__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  color: var(--gold);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 1rem;
+  margin: 0 0 0.65rem;
+}
+
+.nosotros__eyebrow::before,
+.nosotros__eyebrow::after {
+  content: "";
+  width: 70px;
+  height: 1.5px;
+  background: linear-gradient(90deg, transparent, var(--gold));
+}
+
+.nosotros__title {
+  font-size: clamp(2.5rem, 5.3vw, 3.4rem);
+  letter-spacing: -0.02em;
+  margin: 0 0 0.35rem;
+  font-weight: 900;
+}
+
+.nosotros__divider {
+  width: 70px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--gold), #d4af37);
+  margin: 0.2rem auto 0;
+  border-radius: 999px;
+}
+
+.nosotros__content {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  gap: clamp(3.5rem, 6vw, 4.5rem);
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+}
+
+.nosotros__cards-wrapper {
+  display: grid;
+  gap: clamp(3rem, 6vw, 4rem);
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  width: 100%;
+}
+
+.nosotros__director-info {
+  position: relative;
+  text-align: center;
+  padding: clamp(2.5rem, 3vw, 3rem);
+  border: 1px solid rgba(242, 201, 76, 0.15);
+  border-radius: 20px;
+  background: linear-gradient(135deg, rgba(242, 201, 76, 0.04), rgba(242, 201, 76, 0.01));
+  backdrop-filter: blur(8px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+  transition: all 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  overflow: hidden;
+}
+
+.nosotros__director-info::before {
+  content: "";
+  position: absolute;
+  inset: -60% -40% auto;
+  background: radial-gradient(circle at center, rgba(242, 201, 76, 0.1), transparent 55%);
+  transform: rotate(-4deg);
+  pointer-events: none;
+}
+
+.nosotros__director-info:hover {
+  border-color: rgba(242, 201, 76, 0.35);
+  box-shadow: 0 28px 65px rgba(242, 201, 76, 0.15);
+  transform: translateY(-4px);
+}
+
+.nosotros__director-label {
+  color: var(--gold);
+  font-size: 0.95rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.nosotros__director-label::before {
+  content: "♪";
+  font-size: 1.2rem;
+}
+
+.nosotros__director-name {
+  font-size: clamp(1.9rem, 4vw, 2.4rem);
+  letter-spacing: -0.01em;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(135deg, #f5c86b, #d4af37);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 900;
+}
+
+.nosotros__biography {
+  color: var(--gray);
+  font-size: 1.08rem;
+  line-height: 1.85;
+  letter-spacing: 0.3px;
+  position: relative;
+  z-index: 1;
+}
+
+.nosotros__band-info {
+  position: relative;
+  text-align: center;
+  padding: clamp(2.5rem, 3vw, 3rem);
+  border: 1px solid rgba(242, 201, 76, 0.15);
+  border-radius: 20px;
+  background: linear-gradient(135deg, rgba(242, 201, 76, 0.04), rgba(242, 201, 76, 0.01));
+  backdrop-filter: blur(8px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+  transition: all 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  overflow: hidden;
+}
+
+.nosotros__band-info::before {
+  content: "";
+  position: absolute;
+  inset: -60% -40% auto;
+  background: radial-gradient(circle at center, rgba(242, 201, 76, 0.1), transparent 55%);
+  transform: rotate(-4deg);
+  pointer-events: none;
+}
+
+.nosotros__band-info:hover {
+  border-color: rgba(242, 201, 76, 0.35);
+  box-shadow: 0 28px 65px rgba(242, 201, 76, 0.15);
+  transform: translateY(-4px);
+}
+
+.nosotros__band-image {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 2px solid rgba(242, 201, 76, 0.25);
+  box-shadow: 0 20px 60px rgba(242, 201, 76, 0.2);
+  position: relative;
+  z-index: 1;
+  transition: all 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.nosotros__band-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 400ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.nosotros__band-image:hover {
+  border-color: rgba(242, 201, 76, 0.45);
+  box-shadow: 0 28px 70px rgba(242, 201, 76, 0.3);
+  transform: translateY(-4px);
+}
+
+.nosotros__band-label {
+  color: var(--gold);
+  font-size: 0.95rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.nosotros__band-label::before {
+  content: "🎶";
+  font-size: 1.2rem;
+}
+
+.nosotros__band-title {
+  font-size: clamp(1.9rem, 4vw, 2.4rem);
+  letter-spacing: -0.01em;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(135deg, #f5c86b, #d4af37);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 900;
+}
+
+.nosotros__band-biography {
+  color: var(--gray);
+  font-size: 1.08rem;
+  line-height: 1.85;
+  letter-spacing: 0.3px;
+  position: relative;
+  z-index: 1;
+}
+
+/* ========================================
+   RESPONSIVE - LARGE TABLET (max-width: 1024px)
+======================================== */
+@media (max-width: 1024px) {
+  .nosotros {
+    padding: clamp(4rem, 5vw, 5rem) clamp(1.5rem, 3vw, 2.5rem) clamp(3rem, 3vw, 4rem);
+  }
+
+  .nosotros__header {
+    margin-bottom: clamp(3.5rem, 4vw, 4.5rem);
+  }
+
+  .nosotros__title {
+    font-size: clamp(2.1rem, 4.5vw, 2.8rem);
+  }
+
+  .nosotros__content {
+    gap: clamp(3rem, 5vw, 4rem);
+  }
+
+  .nosotros__cards-wrapper {
+    gap: clamp(2.5rem, 5vw, 3.5rem);
+    grid-template-columns: 1fr;
+  }
+
+  .nosotros__director-info,
+  .nosotros__band-info {
+    padding: clamp(2.25rem, 2.5vw, 2.75rem);
+  }
+
+  .nosotros__director-name,
+  .nosotros__band-title {
+    font-size: clamp(1.75rem, 3.5vw, 2.2rem);
+  }
+
+  .nosotros__band-image {
+    max-width: 650px;
+  }
+}
+
+/* ========================================
+   RESPONSIVE - TABLET (max-width: 768px)
+======================================== */
+@media (max-width: 768px) {
+  .nosotros {
+    padding: 3.5rem 1.5rem 3rem;
+  }
+
+  .nosotros__header {
+    margin-bottom: 3rem;
+  }
+
+  .nosotros__eyebrow {
+    font-size: 0.85rem;
+  }
+
+  .nosotros__eyebrow::before,
+  .nosotros__eyebrow::after {
+    width: 20px;
+  }
+
+  .nosotros__title {
+    font-size: clamp(1.9rem, 4vw, 2.4rem);
+    margin-bottom: 1rem;
+  }
+
+  .nosotros__divider {
+    width: 50px;
+    height: 2.5px;
+  }
+
+  .nosotros__content {
+    gap: 2.75rem;
+  }
+
+  .nosotros__cards-wrapper {
+    gap: 2.25rem;
+    grid-template-columns: 1fr;
+  }
+
+  .nosotros__director-info,
+  .nosotros__band-info {
+    padding: 2rem 1.75rem;
+  }
+
+  .nosotros__director-label,
+  .nosotros__band-label {
+    font-size: 0.88rem;
+    margin-bottom: 0.7rem;
+  }
+
+  .nosotros__director-name,
+  .nosotros__band-title {
+    font-size: clamp(1.6rem, 3.5vw, 2rem);
+    margin-bottom: 1.25rem;
+  }
+
+  .nosotros__biography,
+  .nosotros__band-biography {
+    font-size: 1rem;
+    line-height: 1.75;
+  }
+
+  .nosotros__band-image {
+    max-width: 100%;
+    border-radius: 16px;
+  }
+}
+
+/* ========================================
+   RESPONSIVE - MOBILE (max-width: 480px)
+======================================== */
+@media (max-width: 480px) {
+  .nosotros {
+    padding: 2.75rem 1rem 2.5rem;
+  }
+
+  .nosotros__header {
+    margin-bottom: 2.5rem;
+  }
+
+  .nosotros__eyebrow {
+    font-size: 0.8rem;
+    gap: 0.35rem;
+  }
+
+  .nosotros__eyebrow::before,
+  .nosotros__eyebrow::after {
+    width: 16px;
+    height: 1px;
+  }
+
+  .nosotros__title {
+    font-size: clamp(1.7rem, 7vw, 2rem);
+    margin-bottom: 0.9rem;
+  }
+
+  .nosotros__divider {
+    width: 40px;
+    height: 2px;
+  }
+
+  .nosotros__content {
+    gap: 2.25rem;
+  }
+
+  .nosotros__cards-wrapper {
+    gap: 2rem;
+  }
+
+  .nosotros__director-info,
+  .nosotros__band-info {
+    padding: 1.75rem 1.25rem;
+    border-radius: 16px;
+  }
+
+  .nosotros__director-info:hover,
+  .nosotros__band-info:hover {
+    transform: translateY(-2px);
+  }
+
+  .nosotros__director-label,
+  .nosotros__band-label {
+    font-size: 0.82rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .nosotros__director-label::before {
+    font-size: 1.1rem;
+  }
+
+  .nosotros__band-label::before {
+    font-size: 1.1rem;
+  }
+
+  .nosotros__director-name,
+  .nosotros__band-title {
+    font-size: clamp(1.5rem, 6vw, 1.85rem);
+    margin-bottom: 1.1rem;
+    line-height: 1.2;
+  }
+
+  .nosotros__biography,
+  .nosotros__band-biography {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    letter-spacing: 0.2px;
+  }
+
+  .nosotros__band-image {
+    max-width: 100%;
+    border-radius: 12px;
+    border-width: 1.5px;
+  }
+
+  .nosotros__band-image:hover {
+    transform: translateY(-2px);
+  }
+}
+
+/* ========================================
+   RESPONSIVE - EXTRA SMALL MOBILE (max-width: 360px)
+======================================== */
+@media (max-width: 360px) {
+  .nosotros {
+    padding: 2.5rem 0.85rem 2.25rem;
+  }
+
+  .nosotros__header {
+    margin-bottom: 2.25rem;
+  }
+
+  .nosotros__title {
+    font-size: 1.6rem;
+  }
+
+  .nosotros__content {
+    gap: 2rem;
+  }
+
+  .nosotros__cards-wrapper {
+    gap: 1.75rem;
+  }
+
+  .nosotros__director-info,
+  .nosotros__band-info {
+    padding: 1.5rem 1rem;
+  }
+
+  .nosotros__director-name,
+  .nosotros__band-title {
+    font-size: 1.45rem;
+  }
+
+  .nosotros__biography,
+  .nosotros__band-biography {
+    font-size: 0.9rem;
+    line-height: 1.65;
+  }
+}
