@@ -290,7 +290,7 @@
   }
 
   .hero-logo {
-    order: -1;
+    order: 2;
     width: 340px;
     height: 340px;
   }
@@ -347,7 +347,7 @@
   .hero-logo {
     width: 300px;
     height: 300px;
-    order: -1;
+    order: 2;
   }
 }
 
