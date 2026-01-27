@@ -1,4 +1,5 @@
 import "./style/nosotros.css";
+import bandImage from "../../assets/grupo2.jpg";
 
 const Nosotros = () => {
   return (
@@ -29,7 +30,7 @@ const Nosotros = () => {
         </div>
 
         <div className="nosotros__band-image">
-          <img src="src/assets/grupo2.jpg" alt="La Provincial Coracora - Banda Completa" />
+          <img src={bandImage} alt="La Provincial Coracora - Banda Completa" />
         </div>
       </div>
     </section>

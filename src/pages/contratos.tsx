@@ -2,6 +2,7 @@ import { useState, useEffect, type FormEvent } from "react";
 import emailjs from "@emailjs/browser";
 import "./style/contratos.css";
 import Scroll from "../utils/scroll";
+import whatsappIcon from "../assets/icons/whatsapp.png";
 
 const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID || "REPLACE_ME_SERVICE_ID";
 const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || "REPLACE_ME_TEMPLATE_ID";
@@ -137,7 +138,7 @@ const Contratos = () => {
         <div className="contracts__section whatsapp">
           <div className="contracts__section-header">
             <h2 className="contracts__section-title">
-              <img src="src/assets/icons/whatsapp.png" alt="WhatsApp" className="contracts__icon" />
+              <img src={whatsappIcon} alt="WhatsApp" className="contracts__icon" />
               Contacto por WhatsApp
             </h2>
             <p className="contracts__section-subtitle">Respuesta directa e inmediata para reservar tu fecha</p>

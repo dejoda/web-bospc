@@ -1,5 +1,7 @@
 import type { MouseEvent } from "react";
 import "./style/hero.css";
+import heroBg from "../../assets/hero-grupo.jpg";
+import heroLogo from "../../assets/hero-logo.png";
 
 const easeInOutCubic = (t: number) =>
   t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
@@ -34,7 +36,7 @@ const Hero = () => {
   };
 
   return (
-    <section id="inicio" className="hero">
+    <section id="inicio" className="hero" style={{ backgroundImage: `url(${heroBg})` }}>
         <div className="hero-overlay"></div>
 
         <div className="hero-container">
@@ -73,7 +75,7 @@ const Hero = () => {
 
           <div className="hero-logo">
             <img
-              src="src/assets/hero-logo.png"
+              src={heroLogo}
               alt="La Provincial Coracora - Logo"
             />
           </div>
