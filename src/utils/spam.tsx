@@ -9,21 +9,22 @@ const Spam = () => {
   return (
     <div className="spam-bubble">
       <p className="spam-label">Síguenos</p>
-
       <div className="spam-icons">
-        <a href="https://www.tiktok.com/@moris.eder.arce.a" target="_blank">
+        <a href="https://www.tiktok.com/@moris.eder.arce.a" target="_blank" aria-label="TikTok">
           <img src={tiktok} alt="TikTok" />
         </a>
-
-        <a href="https://www.youtube.com/@BandaShowlaProvincialCoracora" target="_blank">
+        <a href="https://www.youtube.com/@BandaShowlaProvincialCoracora" target="_blank" aria-label="YouTube">
           <img src={youtube} alt="YouTube" />
         </a>
-
-        <a href="https://www.facebook.com/morriseder.arceamao" target="_blank">
+        <a href="https://www.facebook.com/morriseder.arceamao" target="_blank" aria-label="Facebook">
           <img src={facebook} alt="Facebook" />
         </a>
-
-        <a href="https://wa.me/51997236893" target="_blank" rel="noreferrer">
+        <a
+          href="https://wa.me/51997236893"
+          aria-label="Whatsapp"
+          target="_blank"
+          rel="noreferrer"
+        >
           <img src={whatsapp} alt="Whatsapp" />
         </a>
       </div>
