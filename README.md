@@ -1,3 +1,21 @@
+# Web BOSPC
+
+URL pública: https://dejoda.github.io/web-bospc/
+
+## Desarrollo rápido
+
+```
+npm install
+npm run dev
+```
+
+## Build y Deploy
+
+```
+npm run build
+npm run deploy
+```
+
 *************************************************************************************************************************************************************************************************************************************************
 🔐 Variables de Entorno (.env)
 

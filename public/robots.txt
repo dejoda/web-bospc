@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /admin
 
-Sitemap: https://dejoda.github.io/BandaShowProvincialCoracora/sitemap.xml
+Sitemap: https://dejoda.github.io/web-bospc/sitemap.xml
