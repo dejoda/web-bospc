@@ -1,3 +1,12 @@
+
+#CONDICIONES
+
+Este proyecto utiliza EmailJS para gestionar el envío de correos electrónicos directamente desde el frontend, permitiendo que los mensajes del formulario de contacto sean enviados sin necesidad de implementar un servidor backend.
+EmailJS facilita la integración de servicios de correo mediante plantillas y credenciales seguras, optimizando el desarrollo y mejorando la experiencia del usuario.
+
+
+
+#-----------------------------------------------------------------------------------------------
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
