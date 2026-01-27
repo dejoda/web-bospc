@@ -17,6 +17,13 @@ const Contratos = () => {
     window.scrollTo(0, 0);
   }, []);
 
+  useEffect(() => {
+    if (status === "success") {
+      const timer = setTimeout(() => setStatus("idle"), 3000);
+      return () => clearTimeout(timer);
+    }
+  }, [status]);
+
   const handleEmail = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const form = event.currentTarget;
