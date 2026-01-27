@@ -104,28 +104,48 @@
 
 /* ========================================
    RESPONSIVE - LARGE TABLET (max-width: 1024px)
+   -> Forzamos menú hamburguesa
 ======================================== */
 @media (max-width: 1024px) {
   .header {
-    padding: 20px 60px;
+    padding: 18px 40px;
   }
 
   .logo .brand {
-    font-size: 24px;
-    letter-spacing: 2.5px;
+    font-size: 23px;
+    letter-spacing: 2.2px;
   }
 
   .menu {
-    gap: 28px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(10, 10, 10, 0.95);
+    backdrop-filter: blur(16px);
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 22px 0;
+    display: none;
+  }
+
+  .menu.open {
+    display: flex;
   }
 
   .menu a {
-    font-size: 13.5px;
+    font-size: 15px;
+    letter-spacing: 0.6px;
+  }
+
+  .menu a::after {
+    display: none;
   }
 
   .cta {
-    padding: 9px 22px;
-    font-size: 13.5px;
+    padding: 10px 24px;
+    font-size: 14px;
   }
 }
 
@@ -134,29 +154,21 @@
 ======================================== */
 @media (max-width: 768px) {
   .header {
-    padding: 18px 30px;
+    padding: 16px 28px;
   }
 
   .logo .brand {
-    font-size: 22px;
-    letter-spacing: 2.2px;
-  }
-
-  .menu {
-    gap: 20px;
+    font-size: 21px;
+    letter-spacing: 2px;
   }
 
   .menu a {
-    font-size: 13px;
-  }
-
-  .menu a::after {
-    display: none;
+    font-size: 14px;
   }
 
   .cta {
-    padding: 8px 20px;
-    font-size: 13px;
+    padding: 10px 24px;
+    font-size: 14px;
   }
 }
 
@@ -165,26 +177,21 @@
 ======================================== */
 @media (max-width: 600px) {
   .header {
-    padding: 16px 20px;
+    padding: 14px 18px;
   }
 
   .logo .brand {
     font-size: 20px;
-    letter-spacing: 2px;
-  }
-
-  .menu {
-    gap: 16px;
+    letter-spacing: 1.8px;
   }
 
   .menu a {
-    font-size: 12px;
-    letter-spacing: 0.3px;
+    font-size: 13px;
   }
 
   .cta {
-    padding: 8px 18px;
-    font-size: 12px;
+    padding: 10px 22px;
+    font-size: 13px;
   }
 }
 
@@ -293,7 +300,7 @@
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .hamburger {
     display: flex;
   }

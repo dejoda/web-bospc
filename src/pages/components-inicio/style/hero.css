@@ -247,33 +247,52 @@
 
 /* ========================================
    RESPONSIVE - LARGE TABLET (max-width: 1024px)
+   -> Apilar y centrar
 ======================================== */
 @media (max-width: 1024px) {
+  .hero {
+    height: auto;
+    min-height: 100vh;
+    padding: 90px 0 70px;
+  }
+
   .hero-container {
-    padding: 0 60px;
-    gap: 60px;
+    flex-direction: column;
+    padding: 0 36px;
+    gap: 48px;
+    text-align: center;
   }
 
   .hero-content {
-    max-width: 580px;
+    max-width: 760px;
   }
 
   .hero h1 {
-    font-size: 68px;
+    font-size: 60px;
+    line-height: 1.15;
+    letter-spacing: -0.5px;
   }
 
   .hero p {
-    font-size: 17px;
-    margin-bottom: 44px;
+    font-size: 18px;
+    line-height: 1.65;
+    margin-bottom: 38px;
   }
 
-  .hero-logo {
-    width: 380px;
-    height: 380px;
+  .hero-actions {
+    justify-content: center;
+    gap: 18px;
   }
 
   .hero-btn {
-    padding: 15px 36px;
+    padding: 15px 34px;
+    font-size: 14px;
+  }
+
+  .hero-logo {
+    order: -1;
+    width: 340px;
+    height: 340px;
   }
 }
 
@@ -360,14 +379,14 @@
 
   .hero h1 {
     font-size: 42px;
-    line-height: 1.05;
-    margin-bottom: 20px;
-    letter-spacing: -0.5px;
+    line-height: 1.08;
+    margin-bottom: 22px;
+    letter-spacing: -0.3px;
   }
 
   .hero p {
-    font-size: 15px;
-    line-height: 1.7;
+    font-size: 16px;
+    line-height: 1.65;
     margin-bottom: 32px;
     opacity: 0.82;
   }
