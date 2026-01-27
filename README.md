@@ -5,8 +5,11 @@ Este proyecto utiliza un archivo .env para almacenar las credenciales necesarias
 Por razones de seguridad, este archivo no se incluye en el repositorio.
 
 📌 Estructura del archivo .env
+
 VITE_EMAILJS_SERVICE_ID=tu_service_id
+
 VITE_EMAILJS_TEMPLATE_ID=tu_template_id
+
 VITE_EMAILJS_PUBLIC_KEY=tu_public_key
 
 🔁 Al clonar el repositorio
