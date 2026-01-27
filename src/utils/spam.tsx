@@ -16,7 +16,7 @@ const Spam = () => {
         <a href="https://www.youtube.com/@BandaShowlaProvincialCoracora" target="_blank" aria-label="YouTube">
           <img src={youtube} alt="YouTube" />
         </a>
-        <a href="https://www.facebook.com/morriseder.arceamao" target="_blank" aria-label="Facebook">
+        <a href="https://www.facebook.com/profile.php?id=100088658712135" target="_blank" aria-label="Facebook">
           <img src={facebook} alt="Facebook" />
         </a>
         <a
