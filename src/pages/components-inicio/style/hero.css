@@ -1,7 +1,7 @@
 .hero {
   position: relative;
   height: 100vh;
-  background-image: url("src/hero-grupo.jpg");
+  background-image: url("src/assets/hero-grupo.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: scroll;

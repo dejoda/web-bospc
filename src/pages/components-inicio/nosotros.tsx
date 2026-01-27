@@ -29,7 +29,7 @@ const Nosotros = () => {
         </div>
 
         <div className="nosotros__band-image">
-          <img src="src/grupo2.jpg" alt="La Provincial Coracora - Banda Completa" />
+          <img src="src/assets/grupo2.jpg" alt="La Provincial Coracora - Banda Completa" />
         </div>
       </div>
     </section>
