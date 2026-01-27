@@ -73,7 +73,7 @@ const Hero = () => {
 
           <div className="hero-logo">
             <img
-              src="./assets/hero-logo.png"
+              src="/hero-logo.png"
               alt="La Provincial Coracora - Logo"
             />
           </div>

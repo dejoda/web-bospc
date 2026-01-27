@@ -137,7 +137,7 @@ const Contratos = () => {
         <div className="contracts__section whatsapp">
           <div className="contracts__section-header">
             <h2 className="contracts__section-title">
-              <img src="./assets/icons/whatsapp.png" alt="WhatsApp" className="contracts__icon" />
+              <img src="/icons/whatsapp.png" alt="WhatsApp" className="contracts__icon" />
               Contacto por WhatsApp
             </h2>
             <p className="contracts__section-subtitle">Respuesta directa e inmediata para reservar tu fecha</p>
