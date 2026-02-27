@@ -1,0 +1,287 @@
+/* Repertorio Page */
+.repertorio {
+  min-height: 100vh;
+  padding: 120px 20px 60px;
+  background: linear-gradient(180deg, #0a0a0a 0%, #1a1a1a 100%);
+}
+
+/* Header */
+.repertorio__header {
+  max-width: 900px;
+  margin: 0 auto 80px;
+  text-align: center;
+}
+
+.repertorio__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 20px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #f2c94c;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  background: rgba(242, 201, 76, 0.1);
+  border: 1.5px solid rgba(242, 201, 76, 0.3);
+  border-radius: 50px;
+  margin-bottom: 25px;
+  backdrop-filter: blur(10px);
+}
+
+.repertorio__eyebrow::before {
+  content: '♪';
+  font-size: 16px;
+}
+
+.repertorio__title {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 900;
+  color: #f5f5f5;
+  margin-bottom: 25px;
+  line-height: 1.1;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+}
+
+.repertorio__description {
+  font-size: 1.15rem;
+  color: #bdbdbd;
+  line-height: 1.7;
+  margin-bottom: 35px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.repertorio__divider {
+  width: 100px;
+  height: 3px;
+  background: linear-gradient(90deg, #f2c94c, #ffe9a3);
+  margin: 0 auto;
+  border-radius: 3px;
+  box-shadow: 0 0 20px rgba(242, 201, 76, 0.5);
+}
+
+/* Filtros */
+.repertorio__filtros {
+  max-width: 1200px;
+  margin: 0 auto 80px;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 50px;
+  border-radius: 24px;
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(242, 201, 76, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.repertorio__busqueda {
+  margin-bottom: 40px;
+}
+
+.repertorio__busqueda-input {
+  width: 100%;
+  padding: 16px 24px;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(242, 201, 76, 0.2);
+  border-radius: 50px;
+  color: #f5f5f5;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.repertorio__busqueda-input::placeholder {
+  color: #bdbdbd;
+}
+
+.repertorio__busqueda-input:focus {
+  border-color: #f2c94c;
+  background: rgba(242, 201, 76, 0.08);
+  box-shadow: 0 0 0 4px rgba(242, 201, 76, 0.15);
+}
+
+.repertorio__filtro-grupo {
+  margin-bottom: 30px;
+}
+
+.repertorio__filtro-titulo {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #f5f5f5;
+  margin-bottom: 15px;
+  letter-spacing: 0.5px;
+}
+
+.repertorio__tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.repertorio__tab {
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(242, 201, 76, 0.2);
+  border-radius: 50px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #bdbdbd;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.repertorio__tab:hover {
+  background: rgba(242, 201, 76, 0.1);
+  color: #f5f5f5;
+  border-color: rgba(242, 201, 76, 0.3);
+}
+
+.repertorio__tab.active {
+  background: linear-gradient(135deg, #f2c94c, #ffe9a3);
+  color: #0a0a0a;
+  border-color: transparent;
+  box-shadow: 0 6px 20px rgba(242, 201, 76, 0.4);
+  font-weight: 700;
+}
+
+/* Lista de canciones */
+.repertorio__lista {
+  max-width: 1200px;
+  margin: 0 auto 60px;
+}
+
+.repertorio__lista-header {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.repertorio__section-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #f5f5f5;
+  margin-bottom: 10px;
+  letter-spacing: -0.5px;
+}
+
+.repertorio__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.repertorio__card {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(242, 201, 76, 0.15);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.repertorio__card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #f2c94c, #ffe9a3);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+  box-shadow: 0 0 15px rgba(242, 201, 76, 0.6);
+}
+
+.repertorio__card:hover {
+  transform: translateY(-8px);
+  background: rgba(242, 201, 76, 0.05);
+  box-shadow: 0 15px 40px rgba(242, 201, 76, 0.2);
+  border-color: rgba(242, 201, 76, 0.3);
+}
+
+.repertorio__card:hover::before {
+  transform: scaleX(1);
+}
+
+.repertorio__card-content {
+  position: relative;
+}
+
+.repertorio__card-star {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  font-size: 1.5rem;
+}
+
+.repertorio__card-titulo {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #f5f5f5;
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+.repertorio__card-artista {
+  font-size: 0.9rem;
+  color: #bdbdbd;
+  margin-bottom: 15px;
+}
+
+.repertorio__card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.repertorio__card-tag {
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.repertorio__card-tag--genero {
+  background: rgba(242, 201, 76, 0.15);
+  color: #ffe9a3;
+  border: 1px solid rgba(242, 201, 76, 0.3);
+}
+
+.repertorio__card-tag--departamento {
+  background: rgba(255, 255, 255, 0.08);
+  color: #f2c94c;
+  border: 1px solid rgba(242, 201, 76, 0.2);
+}
+
+.repertorio__empty {
+  text-align: center;
+  padding: 60px 20px;
+  color: #bdbdbd;
+  font-size: 1.1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .repertorio {
+    padding: 100px 15px 40px;
+  }
+
+  .repertorio__filtros {
+    padding: 30px 20px;
+  }
+
+  .repertorio__tabs {
+    justify-content: center;
+  }
+
+  .repertorio__tab {
+    font-size: 0.85rem;
+    padding: 8px 16px;
+  }
+
+  .repertorio__grid {
+    grid-template-columns: 1fr;
+  }
+}

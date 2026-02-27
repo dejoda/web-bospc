@@ -92,7 +92,7 @@ const Header = () => {
           Galería
         </a>
 
-        <Link to="repertorio" onClick={() => setOpen(false)}>Repertorio</Link>
+        {/* <Link to="repertorio" onClick={() => setOpen(false)}>Repertorio</Link> */}
 
         <Link to="contratos" className="cta" onClick={() => setOpen(false)}>
           Contratos
