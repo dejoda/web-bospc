@@ -70,7 +70,9 @@ const Header = () => {
 
       {/* NAV */}
       <nav className={`menu ${open ? "open" : ""}`}>
-        <Link to="" onClick={handleScrollToTop}>Inicio</Link>
+        <Link to="" onClick={handleScrollToTop}>
+          Inicio
+        </Link>
 
         <a
           href="#nosotros"
@@ -92,7 +94,9 @@ const Header = () => {
           Galería
         </a>
 
-        {/* <Link to="repertorio" onClick={() => setOpen(false)}>Repertorio</Link> */}
+        <Link to="repertorio" onClick={() => setOpen(false)}>
+          Repertorio
+        </Link>
 
         <Link to="contratos" className="cta" onClick={() => setOpen(false)}>
           Contratos
