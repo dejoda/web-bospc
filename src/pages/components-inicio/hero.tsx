@@ -2,6 +2,7 @@ import type { MouseEvent } from "react";
 import "./style/hero.css";
 import heroBg from "../../assets/hero-grupo.jpg";
 import heroLogo from "../../assets/hero-logo.png";
+import { Link } from "react-router";
 
 const easeInOutCubic = (t: number) =>
   t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
@@ -55,13 +56,13 @@ const Hero = () => {
             </p>
 
             <div className="hero-actions">
-              <a
-                href="#contacto"
+              <Link
+                to="contratos"
                 className="hero-btn primary"
-                onClick={(e) => handleSmoothScroll(e, "#contacto")}
+                
               >
                 Contrátanos
-              </a>
+              </Link>
 
               <a
                 href="#galeria"

@@ -1,5 +1,6 @@
 import { Link, useNavigate } from "react-router";
 import "./style/footer.css";
+import { IconGps, IconMailFilled, IconPhoneFilled } from "@tabler/icons-react";
 
 const Footer = () => {
   const navigate = useNavigate();
@@ -86,11 +87,23 @@ const Footer = () => {
 
         {/* Contacto */}
         <div className="footer-contact">
-          <h4>Contacto</h4>
-          <span>📍 Lima, Perú</span>
-          <span>📞 +51 997 236 893</span>
-          <span>✉️ bandashowprovincialcoracora@gmail.com</span>
-        </div>
+  <h4>Contacto</h4>
+
+  <div className="contact-item">
+    <IconGps stroke={2} />
+    <span>Lima, Perú</span>
+  </div>
+
+  <div className="contact-item">
+    <IconPhoneFilled />
+    <span>+51 997 236 893</span>
+  </div>
+
+  <div className="contact-item">
+    <IconMailFilled />
+    <span>bandashowprovincialcoracora@gmail.com</span>
+  </div>
+</div>
 
       </div>
 

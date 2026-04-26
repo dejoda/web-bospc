@@ -266,3 +266,29 @@
     padding-top: 14px;
   }
 }
+
+.contact-item {
+  display: flex;
+  align-items: center; /* 👈 centrado vertical REAL */
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;  /* 👈 MISMO tamaño para todos */
+  height: 22px;
+}
+
+.icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+.text {
+  font-size: 14px;
+  color: var(--gray);
+  line-height: 1.2;
+}

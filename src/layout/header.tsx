@@ -1,6 +1,7 @@
 import { Link, useNavigate } from "react-router";
 import { useState } from "react";
 import "./style/header.css";
+import { IconMenu2, IconMenu2Filled } from "@tabler/icons-react";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -63,9 +64,7 @@ const Header = () => {
         className={`hamburger ${open ? "active" : ""}`}
         onClick={() => setOpen(!open)}
       >
-        <span></span>
-        <span></span>
-        <span></span>
+       <IconMenu2Filled />
       </button>
 
       {/* NAV */}

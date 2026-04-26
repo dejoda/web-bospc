@@ -272,32 +272,22 @@
 
 .hamburger {
   display: none;
-  flex-direction: column;
-  gap: 5px;
   background: none;
   border: none;
   cursor: pointer;
+
+  align-items: center;
+  justify-content: center;
 }
 
-.hamburger span {
-  width: 24px;
-  height: 2px;
-  background: var(--white);
-  transition: all 0.3s ease;
+.hamburger svg {
+  width: 28px;
+  height: 28px;
+  stroke: var(--white);
 }
 
-/* animación X */
-.hamburger.active span:nth-child(1) {
-  transform: rotate(45deg) translateY(9px);
-}
 
-.hamburger.active span:nth-child(2) {
-  opacity: 0;
-}
 
-.hamburger.active span:nth-child(3) {
-  transform: rotate(-45deg) translateY(-9px);
-}
 
 
 @media (max-width: 1024px) {
