@@ -1,10 +1,11 @@
-import { Link, useNavigate } from "react-router";
-import { useState } from "react";
+import { Link, useLocation, useNavigate } from "react-router";
+import { useEffect, useState } from "react";
 import "./style/header.css";
-import { IconMenu2, IconMenu2Filled } from "@tabler/icons-react";
+import { IconMenu2Filled } from "@tabler/icons-react";
 
 const Header = () => {
   const navigate = useNavigate();
+  const location = useLocation();
   const [open, setOpen] = useState(false);
 
   const easeInOutCubic = (t: number) =>
@@ -31,27 +32,45 @@ const Header = () => {
     smoothScrollTo(0);
   };
 
+  const scrollToSection = (sectionId: string) => {
+    const targetElement = document.getElementById(sectionId);
+    if (!targetElement) return false;
+
+    const headerOffset = 80;
+    const elementPosition =
+      targetElement.getBoundingClientRect().top + window.pageYOffset;
+    const offsetPosition = elementPosition - headerOffset;
+
+    smoothScrollTo(offsetPosition);
+    return true;
+  };
+
+  const scrollWhenReady = (sectionId: string, retries = 24) => {
+    if (scrollToSection(sectionId)) return;
+    if (retries <= 0) return;
+    requestAnimationFrame(() => scrollWhenReady(sectionId, retries - 1));
+  };
+
   const handleNavigateToSection = (sectionId: string) => {
     setOpen(false);
-    const scrollToSection = () => {
-      const targetElement = document.getElementById(sectionId);
-      if (!targetElement) return;
 
-      const headerOffset = 80;
-      const elementPosition =
-        targetElement.getBoundingClientRect().top + window.pageYOffset;
-      const offsetPosition = elementPosition - headerOffset;
-
-      smoothScrollTo(offsetPosition);
-    };
-
-    if (window.location.pathname !== "/") {
-      navigate("/");
-      setTimeout(scrollToSection, 120);
-    } else {
-      scrollToSection();
+    if (location.pathname !== "/") {
+      navigate("/", { state: { scrollToSection: sectionId } });
+      return;
     }
+
+    scrollWhenReady(sectionId);
   };
+
+  useEffect(() => {
+    const state = location.state as { scrollToSection?: string } | null;
+    const sectionId = state?.scrollToSection;
+
+    if (location.pathname !== "/" || !sectionId) return;
+
+    scrollWhenReady(sectionId);
+    navigate("/", { replace: true, state: null });
+  }, [location.pathname, location.state, navigate]);
 
   return (
     <header className="header">
@@ -69,7 +88,7 @@ const Header = () => {
 
       {/* NAV */}
       <nav className={`menu ${open ? "open" : ""}`}>
-        <Link to="" onClick={handleScrollToTop}>
+        <Link to="/" onClick={handleScrollToTop}>
           Inicio
         </Link>
 
